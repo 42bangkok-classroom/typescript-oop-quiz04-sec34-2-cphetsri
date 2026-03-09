@@ -4,20 +4,20 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 export class IncidentController {
   @Get('summary')
   getSummary() {
-    return ;
+    return incidentService.getSummary();
   }
 
   @Get()
   findAll() {
-    return ;
+    return incidentService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return ;
+    return incidentService.findOne(id);
   }
 
   @Post()
   create(@Body() body: any) {
-    return ;
+    return incidentService.create(body);
   }
